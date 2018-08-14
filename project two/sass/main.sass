@@ -1,0 +1,482 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "normalize"
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+*
+	box-sizing: border-box
+.img-responsive_logo
+	display: block
+	max-width: 250px
+	height: auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.flex
+	display: flex
+	justify-content: center
+	align-items: center
+
+header 
+	background: url(../images/bg-header.jpg) no-repeat center/cover
+	position: relative
+	width: 100%
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0.85
+		background: linear-gradient(to right, #1be8bf, #0bb4bf)
+.head-nav
+	display: flex
+	justify-content: space-between
+	.logo 
+		width: 30%	
+		padding: 50px
+		display: flex
+		align-items: center
+		z-index: 1000
+		span
+			color: #ffffff
+			
+		img
+			width: 40px
+			margin-right: 5px
+	.btn-head
+		width: 28%
+		display: flex
+		justify-content: flex-end
+		z-index: 1000
+		padding: 50px
+		padding-top: 70px
+		input
+			background: transparent
+			outline: none
+			border: 1px solid #ffffff
+			color: #ffffff
+			cursor: pointer
+			transition: $trans 
+			height: 30px
+			text-align: center
+			width: 100px
+			
+			
+			
+			&:hover
+				color: $h-dark
+				border: 1px solid $h-dark
+	.nav-menu 
+		width: 35%
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 20px
+		z-index: 1000
+		.mobile-menu
+			display: none
+		ul
+			display: flex
+			justify-content: space-around
+			width: 100%
+			margin: 0
+			padding: 0
+			li
+				list-style: none
+				a
+					text-decoration: none
+					color: #ffffff
+					transition: $trans
+					cursor: pointer
+					&:hover
+						color: $h-dark
+
+
+
+.content-header
+	margin: 50px
+	display: flex
+	justify-content: space-around
+	align-items: center
+	.left-bar
+		width: 50%
+		z-index: 1000
+		margin-bottom: 100px
+		h1
+			text-transform: uppercase
+			font-size: 2.5em
+			color: #ffffff
+			width: 40%
+		p
+			width: 70%
+			color: #ffffff
+		input
+			padding: 13px 0px
+			width: 130px
+			font-size: 0.9em
+			text-align: center
+			border-radius: 5px
+			border: none
+			box-shadow: 2px 2px 15px gray
+			margin-right: 20px
+			transition: $trans
+			cursor: pointer
+			&:hover
+				background-color: $h-dark
+				color: #ffffff
+	.right-bar 
+		position: relative
+		margin-bottom: 100px
+		width: 500px
+		img 
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			color: #ffffff
+			padding: 10px
+			background-color: $h-dark
+			border-radius: 5px
+			cursor: pointer
+
+.manage
+	.cont-text 
+		display: flex
+		justify-content: center
+		.main-text
+			width: 400px
+			text-align: center
+			margin-top: 50px
+			h1
+				font-size: 2.5em
+				margin: 0
+			h2
+				margin: 0
+			h2,p
+				color: $grey
+	.container-icons
+		display: flex
+		justify-content: space-around
+		margin-top: 50px
+		.block
+			text-align: center
+			width: 25%
+			img
+			 	height: 70px
+	.btn-manage
+		text-align: center
+		margin-top: 50px
+		input
+			@include inputs		
+			background-color: $btn-green	
+	
+.domain
+	display: flex
+	justify-content: space-between
+	margin-top: 50px
+	.domain-block
+		height: 150px
+		width: 25%
+		display: flex
+		justify-content: center
+		align-items: center
+		i
+			padding: 20px
+			font-size: 2.2em
+			background-color: #ffffff
+			border-radius: 50%
+			margin-right: 15px
+		span
+			color: #ffffff
+			font-weight: bold
+			font-size: 1.2em
+			text-align: center
+	.first
+		background-color: $sky-blue
+		i
+			color: $sky-blue
+	.second
+		background-color: $blue
+		i
+			color: $blue
+	.third
+		background-color: $purple
+		i
+			color: $purple
+	.fourth
+		background-color: $pink
+		i
+			color: $pink
+
+.services 
+	.service-text
+		text-align: center
+		width: 30%
+		margin: 0 auto
+		margin-top: 100px
+		h1
+			font-size: 2.5em
+		p
+			color: $grey
+
+	.service-main
+		width: 45%
+		margin: 0 auto
+		margin-top: 50px
+		.serv-h 
+			display: flex
+			align-items: center
+			cursor: pointer
+			transition: $trans
+			box-shadow: $shadow
+			padding: 0px 10px
+			margin-bottom: 15px
+			i
+				margin-left: 10px
+			h2
+				margin-left: 20px	
+			&:hover
+				background-color: $btn-green
+		.serv-content 
+			display: flex
+			align-items: center
+			padding: 10px
+			box-shadow: $shadow
+			background-color:	$h-dark
+			div
+				margin-right: 15px
+				p
+					color: #ffffff
+
+.customers
+	margin-top: 100px
+	display: flex
+	justify-content: space-around
+	align-items: center
+	background: url(../images/bg-section.jpg) no-repeat center/cover
+	position: relative
+	width: 100%
+	color: #ffffff
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0.9
+		background: linear-gradient(to right, #1be8bf, #0bb4bf)
+	.left-block--castom
+		width: 40%
+		margin-top: 100px
+		z-index: 100
+		margin-bottom: 100px
+		h1
+			font-weight: bold
+			font-size: $h-size
+			width: 60%
+			margin: 0
+			margin-bottom: -10px
+		p
+			width: 80%
+			margin-bottom: 70px
+		input
+			@include inputs
+	.main-right-block
+		z-index: 100
+		width: 40%
+		margin-top: 100px
+		margin-bottom: 100px
+		.right-block--custom
+			display: flex
+			align-items: center
+			.inner-block
+				background-color: #ffffff
+				padding: 10px
+				margin-bottom: 20px
+				border-radius: 10px
+				box-shadow: 5px 5px 15px grey
+				h2
+					margin: 0
+					color:	$h-dark
+				p
+					color: #78909c
+					margin: 0
+.our-team 
+	.team-text
+		width: 35%
+		text-align: center
+		margin: 0 auto
+		p
+			color:	$grey
+	.slider
+		display: flex
+		align-items: center
+		width: 450px
+		margin: 0 auto
+		background-color: $btn-green
+		border-radius: 10px
+		margin-top: 50px
+		.slide
+			text-align: center
+			img
+				margin-left: 35%
+				margin-top: 20px
+				margin-bottom: 10px
+			.inner-slide
+				background-color: $h-dark
+				color: #ffffff
+				border-radius: 0px 0px 10px 10px
+				h2
+					margin: 0
+					padding: 0
+				p
+					margin: 0
+					padding: 0
+					padding-bottom: 10px
+.form-section
+	background-color: #fafafa
+	margin-top: 30px
+	.form-text
+		width: 35%
+		text-align: center
+		margin: 0 auto
+		padding-top: 30px
+		h1
+			font-size: 2.5em
+	form
+		width: 550px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 0 auto
+		margin-top: 50px
+		margin-bottom: 30px
+		input
+			width: 45%
+			margin-bottom: 25px
+			padding: 20px 25px
+			border-radius: 5px
+		textarea
+			width: 100%
+			height: 150px
+			border-radius: 5px
+			margin-bottom: 25px
+			padding: 20px 25px
+		.form-btn
+			@include	inputs 
+			background-color: $btn-green
+			margin: 0 auto			
+		
+footer
+	background-color: #061e37
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 250px
+	.left-footer-block 
+		padding: 20px
+		.logo 
+			display: flex
+			align-items: center
+			
+			span
+				color: #ffffff
+			img
+				width: 40px
+				margin-right: 5px
+		ul
+			display: flex
+			margin: 0
+			margin-top: 10px
+			li
+				color: #ffffff
+				margin-right: 70px
+				cursor: pointer
+				&:first-child
+					list-style: none
+	.right-footer-block	
+		width: 40%
+		ul
+			display: flex
+			justify-content: flex-end
+			li
+				color: #ffffff
+				list-style: none
+				transition: $trans
+				cursor: pointer
+				margin-right: 50px
+				&:hover
+					color: $btn-green
+		.icons-footer
+			margin-right: 90px
+			i
+				color: $grey
+				transition: $trans
+				&:hover
+					color: $btn-green
+
+.preloader 
+	width: 100%
+	height: 100%
+	background-color: $h-dark
+	z-index: 9999
+	transition: all .5s linear
+	position: absolute
+	.loader 
+		width: 75px
+		height: 75px
+		border-radius: 50%
+		border: 10px solid $btn-green
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		border-top: 10px solid #333333
+		animation: 1s bubble linear infinite
+
+@keyframes bubble 
+	from 
+		transform: rotate(0deg)
+	to 
+		transform: rotate(360deg)
+
+.bur 
+	opacity: 0
+	visibility: hidden
+					
+.offset
+	margin-left: 0px	!important
+	transition: $trans
+
+
+				
+
+
+
+@import "media" 

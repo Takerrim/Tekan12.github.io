@@ -1,0 +1,166 @@
+@import "vars"
+
+
+
+@media screen and (max-width: 1024px)
+	.services .service-main
+		width: 600px	
+
+	.content-header	
+		flex-direction: column
+		.left-bar
+			width: 100%
+			text-align: center
+			h1
+				width: 400px
+				margin: 0 auto
+				margin-bottom: 15px
+			p
+				margin: 0 auto
+				margin-bottom: 25px
+		.right-bar
+			width: 100%	
+			img
+				margin: 0 auto
+			i
+				left: 50%
+
+	.customers
+		flex-direction: column
+		.left-block--castom
+			width: 100%
+			text-align: center
+			h1
+				margin: 0 auto
+				margin-bottom: 20px
+				line-height: 50px
+			p
+				margin: 0 auto
+				margin-bottom: 25px
+				line-height: 30px
+		.main-right-block	
+			width: 80%
+			.right-block--castom
+				width: 100%
+			
+	.head-nav 
+		.logo
+			width: 50%	
+		.nav-menu 
+			width: 150px
+			position: absolute
+			top: 150px
+			margin-left: -130px
+			transition: $trans
+			.mobile-menu
+				display: flex
+				justify-content: space-between
+				position: absolute
+				top: -27px
+				width: 100%
+				align-items: center
+				padding: 0 5px
+				background-color: $h-dark
+				border-bottom: 1px solid #ffffff
+				color: #ffffff
+				cursor: pointer
+			.mobile-list
+				flex-direction: column
+				background-color: $h-dark
+				padding: 10px
+				position: absolute
+				top: 0
+				li
+					margin-bottom: 10px
+					a
+						&:hover
+							color: $btn-green
+
+@media screen and (max-width: 802px)
+	.domain
+		flex-wrap: wrap
+		.domain-block
+			width: 50%
+	
+	.services
+		.service-text
+			width: 50%
+		
+	footer
+		flex-direction: column
+		align-items: center
+		height: 230px
+		.left-footer-block 
+			width: 50%
+			.left-list-block
+				width: 420px
+				display: none
+			.logo
+				justify-content: center
+				margin-top: 50px
+		.right-footer-block 
+			width: 50%
+			ul
+				justify-content: center
+			.icons-footer
+				margin: 0 auto
+				margin-bottom: 15px
+
+@media screen and (max-width: 630px)
+	.services
+		padding: 15px
+		.service-main
+			width: 100%	
+			.serv-h 
+				margin: 0 auto
+				width: 100%
+			.serv-content 
+				margin: 0 auto
+				width: 100%
+				flex-direction: column
+				text-align: center
+
+	.form-section
+		form
+			width: 450px
+
+	.manage
+		.container-icons
+			flex-direction: column
+			.block
+				width: 100%
+				padding: 10px
+
+	.domain
+		flex-direction: column
+		.domain-block
+			width: 100%
+
+
+@media screen and (max-width: 510px)
+	.our-team 
+		.slider
+			width: 350px
+
+	footer
+		.right-footer-block	
+			ul
+				li
+					margin-right: 20px
+
+
+
+
+
+// // ≥1200px
+// +media-breakpoint-down(lg)
+
+// // ≥992px
+// +media-breakpoint-down(md)
+
+// // ≥768px
+// +media-breakpoint-down(sm)
+	
+// // ≥576px
+// +media-breakpoint-down(xs)
+
